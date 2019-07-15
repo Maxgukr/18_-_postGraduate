@@ -77,26 +77,6 @@ def checkConstarin1(N):
 						 [p2, p2], [p3, p3], [p2, p2], [p3, p3]])
 
 	#  map coordinate to symbol
-	'''
-	sym_coor = {}
-
-	sym_coor[(1,1)]   = p2
-	sym_coor[(1,-1)]  = p3
-	sym_coor[(-1,-1)] = p4
-	sym_coor[(-1,1)]  = p3
-	sym_coor[(1,3)]   = p1
-	sym_coor[(3,3)]   = p0
-	sym_coor[(3,1)]   = p1
-	sym_coor[(3,-1)]  = p2
-	sym_coor[(3,-3)]  = p3
-	sym_coor[(1,-3)]  = p2
-	sym_coor[(-1,-3)] = p3
-	sym_coor[(-3,-3)] = p2
-	sym_coor[(-3,-1)] = p3
-	sym_coor[(-3,1)]  = p2
-	sym_coor[(-3,3)]  = p1
-	sym_coor[(-1,3)]  = p2
-	'''
 	s = np.array([[-3, 3], [-1, 3], [1, 3], [3, 3],
 				  [-3, 1], [-1, 1], [1, 1], [3, 1],
 				  [-3, -1], [-1, -1], [1, -1], [3, -1],
@@ -150,28 +130,6 @@ def getInitP_symbol(p):
 				         [-1,-1],     [3,-1],
 				  [-3,-3],      [1,-3],[3,-3]]) # sort as the same with sym_coor
 
-	'''
-	p_symbol = np.array([[p1, p1], [p2, p2], [p1, p1], [p0,p0],
-						 [p2, p2], [p3, p3], [p2, p2], [p1, p1],
-						 [p3,p3] , [p4, p4],  [p3,p3], [p2, p2],
-						 [p2, p2], [p3,p3] ,  [p2, p2], [p3, p3]])
-
-	#  map coordinate to symbol
-
-	s = np.array([[-3, 3], [-1, 3], [1, 3],[3,3],
-				  [-3, 1], [-1, 1], [1, 1], [3, 1],
-				[-3,-1]	  , [-1, -1],   [1,-1]   ,  [3, -1],
-				  [-3, -3],  [-1,-1],       [1, -3], [3, -3]])  # sort as the same with sym_coor
-	'''
-	'''
-	p_symbol = np.array([[1/8,1/8], [1/8,1/8], [1/8,1/8], [1/8,1/8],
-						 [1/8,1/8], [1/8,1/8], [1/8,1/8], [1/8,1/8]])
-
-	#  map coordinate to symbol
-
-	s = np.array([[1, 1], [1, -1], [-1, -1], [-1, 1],
-				  [0, np.sqrt(3) + 1], [np.sqrt(3) + 1, 0], [0, -np.sqrt(3) - 1], [-np.sqrt(3) - 1, 0]], dtype=float)
-	'''
 	x = []
 	y = []
 	for i in range(12):
